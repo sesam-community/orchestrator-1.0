@@ -5,6 +5,9 @@ Orchestrator 1.0 microservice
 A microservice that consumes config from a master node and orchestrates its system and pipes to one or more
 slave nodes. The slave nodes then sync their data back to the master node.
 
+.. image:: https://travis-ci.org/sesam-community/orchestrator-1.0.svg?branch=master
+    :target: https://travis-ci.org/sesam-community/orchestrator-1.0
+
 *NOTE: this service assumes all systems and pipes on the slave nodes are managed by the service - do not create or edit
 pipes or systems manually in the slave nodes!*
 
@@ -17,7 +20,7 @@ System configuration in Sesam:
         "name": "Name of data sync microservice",
         "type": "system:microservice",
         "docker": {
-            "image": "sesam/orchestrator-1.0:latest",
+            "image": "sesamcommunity/orchestrator-1.0:latest",
             "port": 5000,
             "memory": 128,
             "environment": {
