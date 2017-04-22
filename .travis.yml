@@ -14,4 +14,4 @@ after_success:
     docker build --build-arg BuildNumber="$TRAVIS_BUILD_NUMBER" --build-arg Commit="$TRAVIS_COMMIT" -t sesamcommunity/orchestrator-1.0 .;
     docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker push sesamcommunity/orchestrator-1.0:latest;
-fi
+    fi
