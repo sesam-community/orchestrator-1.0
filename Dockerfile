@@ -1,6 +1,11 @@
 FROM ubuntu:16.04
 MAINTAINER Graham Moore "graham.moore@sesam.io"
 
+ARG BuildNumber=unknown
+LABEL BuildNumber $BuildNumber
+ARG Commit=unknown
+LABEL Commit $Commit
+
 ENV DEBIAN_FRONTEND noninteractive
 RUN localedef -i en_US -f UTF-8 en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
